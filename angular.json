@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "otel-browser-sandbox": {
+    "app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -40,20 +40,13 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/otel-browser-sandbox",
+            "outputPath": "dist/app",
             "index": "src/index.html",
             "browser": "src/main.ts",
-            "polyfills": [
-              "zone.js"
-            ],
+            "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "assets": ["src/favicon.ico", "src/assets"],
+            "styles": ["src/styles.css"],
             "scripts": []
           },
           "configurations": {
@@ -84,10 +77,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "otel-browser-sandbox:build:production"
+              "buildTarget": "app:build:production"
             },
             "development": {
-              "buildTarget": "otel-browser-sandbox:build:development"
+              "buildTarget": "app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -95,7 +88,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "otel-browser-sandbox:build"
+            "buildTarget": "app:build"
           }
         }
       }
