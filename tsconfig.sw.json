@@ -3,8 +3,9 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "outDir": "./out-tsc/app",
+    "lib": ["ES2020", "WebWorker"],
     "types": []
   },
-  "files": ["src/main.ts"],
+  "files": ["src/serviceWorker.ts"],
   "include": ["src/**/*.d.ts"]
 }
